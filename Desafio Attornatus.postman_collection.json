@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "961944ea-16a3-4135-a50d-3c75e0dceecc",
+		"name": "Desafio Attornatus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar uma pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Alexandre Salerno\",\r\n    \"dataNascimento\": \"1996-09-08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar uma pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"nome\": \"Luiz Toledo\",\r\n    \"dataNascimento\": \"1996-09-08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar uma pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/pessoas/id/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pessoas",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "•\tListar pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar endereço para uma pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"logradouro\": \"Rua da Paz\",\r\n    \"cep\": \"01110-000\",\r\n    \"numero\": 500,\r\n    \"cidade\": \"São Paulo\",\r\n    \"pessoa\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/enderecos",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"enderecos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar endereços da pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/enderecos/pessoa/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"enderecos",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Definir endereço escolhido como principal da pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/enderecos/pessoa/1/principal/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"enderecos",
+						"pessoa",
+						"1",
+						"principal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
